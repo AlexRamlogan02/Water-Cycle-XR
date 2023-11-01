@@ -1,0 +1,11 @@
+Model Information:
+* title:	Halloween potion👻
+* source:	https://sketchfab.com/3d-models/halloween-potion-3c59ea5af6034c1fb3dbcfe1281a7331
+* author:	sch0i (https://sketchfab.com/sch0i)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Halloween potion👻" (https://sketchfab.com/3d-models/halloween-potion-3c59ea5af6034c1fb3dbcfe1281a7331) by sch0i (https://sketchfab.com/sch0i) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
