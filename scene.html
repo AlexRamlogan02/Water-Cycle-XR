@@ -11,13 +11,13 @@
 
         <a-scene embedded arjs = 'sourceType: webcam;'>
             
-            <!-- Change the asset once we have the model!-->
+            <!-- Updated Model! -->
             <a-assets>
                 <!-- Change the model when we have it (preferably a gltf model)-->
-                <a-asset-item id = "test-model" src = "models/test-model/halloween_potion/scene.gltf"></a-asset-item>
+                <a-asset-item id = "base-model" src = "models/base_model_v1/water_cycle_model.glb"></a-asset-item>
             </a-assets>
 
-            <a-entity gltf-model="#test-model" position = '0 0.5 0' scale = '0.25 0.25 0.25'></a-entity>
+            <a-entity gltf-model="#base-model" position = '0 1 0' rotation = "0 120 0" scale = '0.25 0.25 0.25'></a-entity>
 
             <!-- Used: A hiro marker. We can replace with a customized marker at some point!-->
             <a-marker-camera preset='hiro'></a-marker-camera>
