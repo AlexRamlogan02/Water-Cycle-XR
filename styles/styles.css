@@ -5,45 +5,68 @@
 body {
 	font-family: 'Inconsolata', serif;
 }
-.header {
-	z-index: 1;
-	background: linear-gradient(-45deg, #7c16bd 0%,#05007c 33%, #03459c 66%, #00d4b3 100%);
-	background-size: 400% 400%;
-	width: 100%;
-	height: max-content;
-	animation: animate 20s ease infinite;
 
+/*media breakpoint for mobile*/
+
+@media only screen and (max-width: 950px){
+	p{
+		font-size: medium;
+	}
+
+	a{
+		display: inline-block;
+		font-family: 'Inconsolata', serif;
+		cursor: pointer;
+		border-radius: 4px;
+		padding: 7px 12px 8px;
+		margin-top: 5%;
+		text-transform: uppercase;
+		font-style: italic;
+		line-height: 0.5;
+		transition: transform 200ms,background 200ms;
+		background: transparent;
+		color: #fff;
+		box-shadow: 0 0 0 3px #fff inset;
+		font-size: small;
+		font-weight: 400;
+	}
+  }
+
+/*default*/
+h1{
+	text-align: center;
+	font-size: 8vw;
 }
 
-.header h2 {
+h2{
 	text-align: center;
-	color: #fff;
-	font-size: 60px;
-	margin-top: 15%;
-	margin-bottom: 20px;
-	padding-inline: 0%;
+	font-size: 5vw;
 }
 
-.header p {
+h3{
 	text-align: center;
-	font-size: 18px;
+	font-size: 4.5vw;
+	text-decoration: underline dashed #05007C;
+	text-decoration-skip-ink: none;
+	padding-top: 5%;
+}
+
+p{
+	text-align: center;
 	font-size: small;
-	font-style: italic;
-	text-decoration: underline;
-	margin: auto;
-	padding-inline: 15%; 
-	color: #ddd;
-	line-height: 1.7;
+  	line-height: 1.7;
+	padding-inline: 15%;
 }
 
-.header a {
+
+a {
 	display: inline-block;
 	font-family: 'Inconsolata', serif;
 	cursor: pointer;
 	border-radius: 8px;
 	padding: 14px 24px 16px;
 	margin-top: 5%;
-	font-size: 18px;
+	font-size: large;
 	font-weight: 700;
 	text-transform: uppercase;
 	font-style: italic;
@@ -54,16 +77,33 @@ body {
 	box-shadow: 0 0 0 3px #fff inset;
 }
 
-.container{
+
+a:hover{
+	transform: translateY(-2px);
+}
+
+.button-container{
 	width: 100%;
   	text-align: center;
 	padding-top: 2%;
 	padding-bottom: 2%
 }
-.header a:hover{
-	transform: translateY(-2px);
+
+
+/*header specific*/
+
+/*Header background*/
+.header {
+	z-index: 1;
+	background: linear-gradient(-45deg, #7c16bd 0%,#05007c 33%, #03459c 66%, #00d4b3 100%);
+	background-size: 400% 400%;
+	width: 100%;
+	height: max-content;
+	animation: animate 20s ease infinite;
+	text-align: center;
 }
 
+/* keyframes animation*/
 @keyframes animate {
 	0% {
 		background-position: 0% 50%;
@@ -75,3 +115,71 @@ body {
 		background-position: 0% 50%;
 	}
 }
+
+.header h2{
+	color: #fff;
+	text-decoration: underline;
+}
+
+.header p {
+	color: #fff;
+	font-style: italic;
+}
+
+.header u{
+	text-decoration: underline #97D8C4 wavy;
+	text-decoration-skip-ink: none;
+}
+
+
+
+.headerimg{
+	color: transparent;
+	width: auto;
+	height: 30px;
+	background-image: url("/images/cloud_border.png");
+	background-size: contain;
+	background-position: left center;
+	background-repeat: repeat-x;
+
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.footerimg{
+	color: transparent;
+	width: auto;
+	height: 30px;
+	background-image: url("/images/wave_border.png");
+	background-size: contain;
+	background-position: left center;
+	background-repeat: repeat-x;
+
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+
+
+/*tutorial*/
+
+.tutorial{
+	width: 100%;
+	height: max-content;
+	margin: auto;
+	padding-bottom: 10%;
+	text-align: center;
+}
+
+.tutorial img{
+	width: 20vw;
+	height: 20vw;
+	padding: 5%;
+}
+
+
+.tutorial u{
+	text-decoration: underline dotted #05007C;
+	text-decoration-skip-ink: none;
+}
+

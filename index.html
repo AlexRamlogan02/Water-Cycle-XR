@@ -3,7 +3,7 @@
 <!--divinectorweb.com-->
 <head>
 	<meta charset="UTF-8">
-    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <meta name=“viewport” content= “width=device-width, initial-scale=1.0”>
     <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" href=https://fonts.googleapis.com/css?family=Inconsolata>
@@ -13,18 +13,76 @@
 	<script> src = "index.js" </script>
 </head>
 <body>
+
+	<!-- Header section-->
 	<div class="header">
-		<ul>
-			<li>	
-			</li>
-		</ul>
-		<h2>Water Cycle Simulator</h2>
-		<p>Dive into the dynamic world of water cycles with our augmented reality simulator, where you can witness the mesmerizing journey of water from evaporation to precipitation.</p>
-		<div class = "container"
+		<h2  style="padding: 5%">Water Cycle Simulator</h2>
+		<p>Dive into the dynamic world of water cycles with our <u>augmented reality simulator</u>, where you can witness the mesmerizing journey of water from evaporation to precipitation.</p>
+		<div class = "button-container"
 		<li id = "menu"> 
-			<a id = "start_button" href="scene.html" class="button">Start</a>
+			<a href="scene.html" class="button">Start</a>
 		</li>
 		</div>
+	</div>
+
+	<!-- Tutorial section-->
+	
+	<div class  = "tutorial">
+		<p class = "headerimg"></p>
+		<h1>Welcome! </h1>
+		<img src="images/temp_image.png" alt = "temp">
+
+		<h2> What is the water cycle?</h2>
+
+		<p style = "padding-top: 5%; padding-bottom: 5%;">
+			The water cycle describes how water makes its way around the Earth, where it goes, and where it's stored. It has no beginning and no end. The purpose of this website is to demonstrate and explain how the water cycle works in a fun, interactive model that works on any phone!
+		</p>
+
+		<img src="images/temp_image.png" alt = "temp">
+
+		<h2>How does this work?</h2>
+		<p style = "font-size: xx-small; font-style: italic; padding-top: 3%; padding-bottom: 3%;"> Before get started, please make sure you have a <u>printer</u> and a <u>cell-phone with a camera!</u></p>
+
+
+		<h3>Step 1</h3>
+		<img src="images/temp_image.png" alt = "temp-alt">
+		
+		<div class = "button-container" style = "padding-bottom: 5%; padding-top: 0px">
+			<a class = button style = "color: black;
+			box-shadow: 0 0 0 3px black inset"
+			href="/marker/WaterCycleMarker.pdf" target="_blank">Print</a>
+		</div>
+
+		<p>Click the <u><em>PRINT<em></u> button below to find a marker! This needs to be printed on blank piece of paper.</p>
+		<p style = "font-size: xx-small; font-weight: 200;">(This is what will let us use AR!)</p>
+
+		
+		<h3>Step 2</h3>
+		<img src="images/temp_image.png" alt = "temp-alt">
+		<p>Lay down the marker on a flat surface in a well-lighted area.</p>
+
+		<h3>Step 3</h3>
+
+		<img src="images/temp_image.png" alt = "temp-alt">
+		
+		<p>Click <u>START</u> to open your phone's camera!</p>
+		<p style = "font-size: xx-small; font-weight: 200;">(Remember to allow use of your camera!)</p>
+
+		<h3>Step 4</h3>
+		<img src="images/temp_image.png" alt = "temp-alt">
+
+		<p style = "font-size: x-large; font-weight: 800;"> <em><b>Have fun!!</b></em></p>
+		<p>Navigate the model, by rotating, zooming, or clicking each button to learn about each phase of the water cycle!</p>
+		
+		
+		<div class = "button-container" style = "padding-bottom: 5%; padding-top: 0px">
+			<a style = "color: black;
+			box-shadow: 0 0 0 3px black inset"
+			href="scene.html" class="button">Start</a>
+		</div>
+
+		<p class = "footerimg"></p>
+		<p style = "font-size: xx-small;"> Thank you for trying our water cycle simulator!!</p>
 	</div>
     
 </body>

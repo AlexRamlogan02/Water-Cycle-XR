@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
     <head>
         <title> Water Cycle XR </title>
         
@@ -6,29 +7,52 @@
         <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
         <!-- ARjs script-->
         <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+        <!-- Gesture controls-->
+        <script src = "https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+        <!-- Help animations-->
+        <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     </head>
     <body style="margin: 0px; overflow: hidden;">
 
         <a-scene
-        arjs
-        embedded
-        renderer = "logarithmicDepthBuffer: true"
-        vr-mode-ui = "enabled: false;"
-        gesture-detector
-        id = "scene"
+            arjs
+            embedded 
+            renderer = "logarithmicDepthBuffer: true;"
+            vr-mode-ui = "enabled: false"
+            gesture-detector
+            id = "scene"
          >
             
             <!-- Updated Model! -->
             <a-assets>
                 <!-- Change the model when we have it (preferably a gltf model)-->
-                <a-asset-item id = "base-model" src = "models/base_model_v1/water_cycle_model.glb"></a-asset-item>
+                <!-- UPDATE: replaced with Base model v2-->
+                <a-asset-item id = "base-model" src = "models/base_model_v2/water_cycle_model_v2.glb"></a-asset-item>
+                
             </a-assets>
 
-            <a-entity gltf-model="#base-model" position = '0 0.5 0' rotation = "0 120 0" scale = '0.15 0.15 0.15'></a-entity>
+            <a-entity gltf-model="#base-model" 
+            class = "clickable"
+            position = "0 0.5 0"
+            rotation = "0 120 0" 
+            scale = "0.15 0.15 0.15"
+            id = "base"
+            gesture-handler
+            ></a-entity>
             
 
             <!-- Used: A hiro marker. We can replace with a customized marker at some point!-->
-            <a-marker-camera preset='hiro'></a-marker-camera>
+            <a-marker-camera preset= "custom"
+            type = "pattern"
+            url = "marker/pattern-Marker_image.patt"
+            raycaster = "objectsL .clickable"
+            emitevents = "true"
+            cursor = "fuse: false;
+                rayOrigin: mouse;"
+            id = "markerA"
+            ></a-marker-camera>
+
+            <a-entity camera></a-entity>
             
         </a-scene>
 
