@@ -27,7 +27,7 @@
             <a-assets>
                 <!-- Change the model when we have it (preferably a gltf model)-->
                 <!-- UPDATE: replaced with Base model v2-->
-                <a-asset-item id = "base-model" src = "models/base_model_v2/water_cycle_model_v2.glb"></a-asset-item>
+                <a-asset-item id = "base-model" response-type = "arraybuffer" src = "models/water_cycle_model.glb"></a-asset-item>
                 
             </a-assets>
 
@@ -37,6 +37,7 @@
             rotation = "0 120 0" 
             scale = "0.15 0.15 0.15"
             id = "base"
+            animation-mixer
             gesture-handler
             ></a-entity>
             
