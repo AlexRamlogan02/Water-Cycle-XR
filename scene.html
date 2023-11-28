@@ -17,12 +17,18 @@
         <a-scene
             arjs
             embedded 
-            renderer = "logarithmicDepthBuffer: true;"
+            renderer = "logarithmicDepthBuffer: true;
+                        antialias: true;
+                   colorManagement: true;
+                   sortObjects: true;
+                   physicallyCorrectLights: true;"
             vr-mode-ui = "enabled: false"
             gesture-detector
             id = "scene"
+            gesture-handler
          >
             
+          
             <!-- Updated Model! -->
             <a-assets>
                 <!-- Change the model when we have it (preferably a gltf model)-->
@@ -30,17 +36,98 @@
                 <a-asset-item id = "base-model" response-type = "arraybuffer" src = "models/water_cycle_model.glb"></a-asset-item>
                 
             </a-assets>
+          
 
             <a-entity gltf-model="#base-model" 
             class = "clickable"
             position = "0 0.5 0"
             rotation = "0 120 0" 
-            scale = "0.15 0.15 0.15"
+            scale = "0.5 0.5 0.5"
             id = "base"
+            light="defaultLightsEnabled: false"
             animation-mixer
-            gesture-handler
             ></a-entity>
             
+            <a-entity  geometry  = "primitive: plane;
+                                    height: 1;
+                                    width: 2;
+                                    "
+                      rotation = "-30 30 0"
+                      position = "-1.5 3 -1.25"
+                      material = "color: #6dedc9"
+                      text = "value: Precipitation - As clouds condense, the vapor turns back to a liquid 
+                            or a solid. This liquid becomes heavy and falls back down to Earth 
+                            as rain. If it’s cold enough, it can fall down as snow or hail.;
+                            color: black;
+                            width: 1.75;"
+                      id = "Precipitation"
+                      ></a-entity>
+          
+          <a-entity geometry = "primitive: plane;
+                                height: 1;
+                                width: 2"
+                    position = "-2 2 2"
+                    rotation = "-30 30 0"
+                    material = "color: #6dedc9"
+                    text = "value: Condensation - As water vapor rises higher, it begins to cool and 
+                            gather together. This makes different kinds of clouds in the sky, fog near 
+                            the ground, or the morning dew on the grass.; 
+                            color: black;
+                            width: 1.75;"
+                    id = "Condensation"
+                    ></a-entity>
+          
+          <a-entity
+                    geometry = "primitive: plane;
+                                height: 1;
+                                width: 2"
+                    position = "1 1 2"
+                    rotation = "-30 30 0"
+                    material = "color: #6dedc9"
+                    text = "value: Evaporation - Water enters our atmosphere 
+                            from a liquid state. This can happen as bodies 
+                            of water, like puddles or oceans, heat up from the sun
+                            and become water vapor.;
+                            color: black;
+                            width: 1.75
+                            "
+                    id = "Evaporation"
+                    ></a-entity>
+          <a-entity
+                    
+                    geometry = "primitive: plane;
+                                height: 1;
+                                width: 2"
+                    position = "2 1.75 -2"
+                    rotation = "-30 30 0"
+                    material = "color: #6dedc9"
+                    text = "value:  Transpiration - This is another way water enters the atmosphere 
+                            as vapor, but from plants like flowers, trees, and your own houseplant.
+                            This happens as the plant photosynthesizes, releasing water vapor.;
+                            color: black;
+                            width: 1.75"
+                    id = "Transpiration"
+                    ></a-entity>
+          
+          <a-entity geometry = "primitive: plane;
+                                height: 1;
+                                width: 2"
+                    position = "-1 1 -2"
+                    rotation = "-30 30 0"
+                    material = "color: #6dedc9"
+                    text = "value: Collection - Say that it’s not very cold, and it rains. 
+                              This rain falls down and can collect in rivers that flow to bigger 
+                              bodies of water like lakes and oceans. Like a cycle, it all starts 
+                              all over again.;
+                              color: black;
+                              width: 1.75;
+                              "
+                      id = "Collection"
+                    ></a-entity>
+          
+            <a-light type = "ambient" color = "#bbb"></a-light>
+            <a-light type="directional" light="castShadow:true;" color = "#4affec " position="1 1 1" intensity="0.5"></a-light>
+            <a-light type="point" light = "castShadow: true;" position = "2 1 5" decay = "2" distance = "50" color = " #ffbd4a" intensity = "0.75"></a-light>
 
             <!-- Used: A hiro marker. We can replace with a customized marker at some point!-->
             <a-marker-camera preset= "custom"
