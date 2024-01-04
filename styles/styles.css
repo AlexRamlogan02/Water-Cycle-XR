@@ -2,18 +2,39 @@
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	font-family: 'Inconsolata', serif;
 }
 
 /*media breakpoint for mobile*/
 
-@media only screen and (max-width: 950px){
-	p{
-		font-size: medium;
+@media only screen and (max-width: 950px) {
+
+	/*default*/
+	h1 {
+		text-align: center;
+		font-size: xx-large;
 	}
 
-	a{
+	h2 {
+		text-align: center;
+		font-size: larger;
+	}
+
+	h3 {
+		text-align: center;
+		font-size: large;
+		text-decoration: underline dashed #05007C;
+		text-decoration-skip-ink: none;
+		padding-top: 5%;
+	}
+
+	p {
+		font-size: xx-small;
+	}
+
+	a {
 		display: inline-block;
 		font-family: 'Inconsolata', serif;
 		cursor: pointer;
@@ -23,38 +44,38 @@ body {
 		text-transform: uppercase;
 		font-style: italic;
 		line-height: 0.5;
-		transition: transform 200ms,background 200ms;
+		transition: transform 200ms, background 200ms;
 		background: transparent;
 		color: #fff;
 		box-shadow: 0 0 0 3px #fff inset;
 		font-size: small;
 		font-weight: 400;
 	}
-  }
+}
 
 /*default*/
-h1{
+h1 {
 	text-align: center;
-	font-size: 8vw;
+	font-size: 6vw;
 }
 
-h2{
+h2 {
 	text-align: center;
-	font-size: 5vw;
+	font-size: 3vw;
 }
 
-h3{
+h3 {
 	text-align: center;
-	font-size: 4.5vw;
+	font-size: 2vw;
 	text-decoration: underline dashed #05007C;
 	text-decoration-skip-ink: none;
 	padding-top: 5%;
 }
 
-p{
+p {
 	text-align: center;
-	font-size: small;
-  	line-height: 1.7;
+	font-size: large;
+	line-height: 1.7;
 	padding-inline: 15%;
 }
 
@@ -71,20 +92,20 @@ a {
 	text-transform: uppercase;
 	font-style: italic;
 	line-height: 1;
-	transition: transform 200ms,background 200ms;
+	transition: transform 200ms, background 200ms;
 	background: transparent;
 	color: #fff;
 	box-shadow: 0 0 0 3px #fff inset;
 }
 
 
-a:hover{
+a:hover {
 	transform: translateY(-2px);
 }
 
-.button-container{
+.button-container {
 	width: 100%;
-  	text-align: center;
+	text-align: center;
 	padding-top: 2%;
 	padding-bottom: 2%
 }
@@ -95,7 +116,7 @@ a:hover{
 /*Header background*/
 .header {
 	z-index: 1;
-	background: linear-gradient(-45deg, #7c16bd 0%,#05007c 33%, #03459c 66%, #00d4b3 100%);
+	background: linear-gradient(-45deg, #7c16bd 0%, #05007c 33%, #03459c 66%, #00d4b3 100%);
 	background-size: 400% 400%;
 	width: 100%;
 	height: max-content;
@@ -108,15 +129,17 @@ a:hover{
 	0% {
 		background-position: 0% 50%;
 	}
+
 	50% {
 		background-position: 100% 50%;
 	}
+
 	100% {
 		background-position: 0% 50%;
 	}
 }
 
-.header h2{
+.header h2 {
 	color: #fff;
 	text-decoration: underline;
 }
@@ -126,14 +149,14 @@ a:hover{
 	font-style: italic;
 }
 
-.header u{
+.header u {
 	text-decoration: underline #97D8C4 wavy;
 	text-decoration-skip-ink: none;
 }
 
 
 
-.headerimg{
+.headerimg {
 	color: transparent;
 	width: auto;
 	height: 30px;
@@ -146,7 +169,7 @@ a:hover{
 	margin-bottom: 5%;
 }
 
-.footerimg{
+.footerimg {
 	color: transparent;
 	width: auto;
 	height: 30px;
@@ -163,7 +186,7 @@ a:hover{
 
 /*tutorial*/
 
-.tutorial{
+.tutorial {
 	width: 100%;
 	height: max-content;
 	margin: auto;
@@ -171,15 +194,14 @@ a:hover{
 	text-align: center;
 }
 
-.tutorial img{
-	width: 20vw;
-	height: 20vw;
-	padding: 5%;
+.tutorial img {
+	width: 10vw;
+	height: 10vw;
+	padding: 2%;
 }
 
 
-.tutorial u{
+.tutorial u {
 	text-decoration: underline dotted #05007C;
 	text-decoration-skip-ink: none;
 }
-
